@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Costume Lock Studio · 换装锁衣</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+  <h1>Costume Lock Studio · 换装锁衣</h1>
+  <p class="tagline">先把衣服锁死，再转跳舞视频 —— 不让 AI 再把衣服换掉。</p>
+  <p class="honest">诚实说明：每次生成都是一次新的随机采样。锁死提示词能大幅降低衣服漂移，但不能保证 100%。所以第 4 步一定要验帧。</p>
+</header>
+
+<main>
+  <!-- 步骤 1 -->
+  <section class="step" id="step1">
+    <h2>第 1 步 · 选人像</h2>
+    <p>上传一张人像照片，或者直接用内置的紫色纱裙定妆图。</p>
+    <div class="preview-wrap">
+      <img id="portrait" src="assets/demo-purple-still.webp" alt="定妆图预览">
+    </div>
+    <div class="row">
+      <label class="btn" for="upload">上传自己的照片</label>
+      <input type="file" id="upload" accept="image/*" hidden>
+      <button class="btn secondary" id="useDemo" type="button">用内置定妆图</button>
+    </div>
+    <p class="hint" id="portraitHint">当前：内置定妆图（紫色纱裙 · 已验证）</p>
+  </section>
+
+  <!-- 步骤 2 -->
+  <section class="step" id="step2">
+    <h2>第 2 步 · 选服装</h2>
+    <p>点一套服装，下面两条提示词会跟着变，颜色按服装锁死。</p>
+    <div class="costumes" id="costumes"></div>
+  </section>
+
+  <!-- 步骤 3 -->
+  <section class="step" id="step3">
+    <h2>第 3 步 · 拿提示词</h2>
+    <p>两条都已按所选服装锁死，点复制，拿到你自己的生成器里用。</p>
+    <h3>生图提示词</h3>
+    <textarea id="imagePrompt" readonly rows="8"></textarea>
+    <button class="btn" id="copyImage" type="button">复制生图提示词</button>
+    <h3>10 秒跳舞视频提示词</h3>
+    <textarea id="videoPrompt" readonly rows="8"></textarea>
+    <button class="btn" id="copyVideo" type="button">复制视频提示词</button>
+  </section>
+
+  <!-- 步骤 4 -->
+  <section class="step" id="step4">
+    <h2>第 4 步 · 验帧再转视频</h2>
+    <p>先出定妆图，对着清单逐项打勾，全部通过再去生成 10 秒跳舞视频。</p>
+    <ul class="checklist" id="checklist">
+      <li><label><input type="checkbox"> 裙色对了（和所选服装一致，没换色）</label></li>
+      <li><label><input type="checkbox"> 刺绣对了（图案、颜色都在）</label></li>
+      <li><label><input type="checkbox"> 头饰对了（流苏、发饰都在）</label></li>
+      <li><label><input type="checkbox"> 脸没换（是你选的人像）</label></li>
+      <li><label><input type="checkbox"> 背景没换（和定妆图一致）</label></li>
+    </ul>
+    <p class="status" id="checkStatus">还有 5 项没确认。</p>
+  </section>
+</main>
+
+<footer>
+  <p>Costume Lock Studio · Kiroween 2026 · Costume Contest —— v1 是提示词锁衣工作室，图片与视频生成在你自己的生成器里完成，本站不调用任何生成 API。</p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,89 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  background: #f7f2ea;
+  color: #2b2430;
+  line-height: 1.6;
+}
+header {
+  background: linear-gradient(135deg, #6b4fa1, #9b7ec4);
+  color: #fff;
+  padding: 28px 20px;
+  text-align: center;
+}
+header h1 { margin: 0 0 8px; font-size: 26px; }
+header p { margin: 6px auto; max-width: 640px; }
+.tagline { font-size: 16px; }
+.honest {
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 14px;
+}
+main { max-width: 760px; margin: 0 auto; padding: 20px 16px 40px; }
+.step {
+  background: #fff;
+  border: 1px solid #e5dcef;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.step h2 { margin-top: 0; color: #6b4fa1; font-size: 20px; }
+.step h3 { margin: 18px 0 8px; font-size: 16px; }
+.preview-wrap { text-align: center; }
+.preview-wrap img {
+  max-width: 100%;
+  max-height: 420px;
+  border-radius: 10px;
+  border: 1px solid #e5dcef;
+}
+.row { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 12px; }
+.btn {
+  display: inline-block;
+  background: #6b4fa1;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-size: 15px;
+  cursor: pointer;
+}
+.btn:hover { background: #5a3f8c; }
+.btn.secondary { background: #fff; color: #6b4fa1; border: 1px solid #6b4fa1; }
+.hint { color: #777; font-size: 14px; }
+.costumes { display: flex; flex-direction: column; gap: 10px; }
+.costume {
+  text-align: left;
+  background: #faf7ff;
+  border: 2px solid #e5dcef;
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-size: 15px;
+  cursor: pointer;
+  color: #2b2430;
+}
+.costume strong { display: block; font-size: 16px; }
+.costume span { color: #777; font-size: 14px; }
+.costume.active { border-color: #6b4fa1; background: #f0e8fb; }
+textarea {
+  width: 100%;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.6;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  background: #fafafa;
+}
+.checklist { list-style: none; padding: 0; }
+.checklist li { padding: 8px 0; border-bottom: 1px solid #f0ebf5; font-size: 16px; }
+.checklist input { transform: scale(1.3); margin-right: 8px; }
+.status { font-weight: bold; color: #a15c00; }
+.status.ok { color: #2e7d32; }
+footer {
+  text-align: center;
+  color: #888;
+  font-size: 13px;
+  padding: 0 16px 30px;
+}

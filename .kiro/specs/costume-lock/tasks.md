@@ -1,0 +1,27 @@
+# Tasks — Costume Lock Studio
+
+- [x] 1. 建仓库骨架
+  - [x] 新建 `~/workspace/kiroween-costume-lock/`，不碰旧工作空间
+  - [x] 复制已验证的紫色定妆图到 `app/assets/demo-purple-still.webp`
+  - [x] 写 `.gitignore`（node_modules、.DS_Store；不忽略 `.kiro`）
+- [x] 2. 写 Kiro spec
+  - [x] `.kiro/steering/product.md`（产品愿景与锁衣规则）
+  - [x] `.kiro/specs/costume-lock/requirements.md`（需求与验收标准）
+  - [x] `.kiro/specs/costume-lock/design.md`（设计）
+  - [x] `.kiro/specs/costume-lock/tasks.md`（本文件）
+- [x] 3. 实现静态应用
+  - [x] `app/index.html`：4 个步骤区块（选人像 / 选服装 / 拿提示词 / 验帧）
+  - [x] `app/app.js`：三套服装数据、提示词生成、复制按钮、验帧计数
+  - [x] `app/styles.css`：中文界面样式
+- [x] 4. 写 README
+  - [x] 真实问题、4 步演示流程、Kiro 用法、提交清单、诚实说明、TODO
+- [x] 5. 验证
+  - [x] 本地起静态服务器，确认 4 步渲染、换服装更新两条提示词、复制按钮存在、定妆图加载
+  - [x] 确认 `.kiro` 在仓库根目录，`.gitignore` 没有忽略它
+  - [x] 确认仓库不引用旧工作空间作为提交物
+- [ ] 6. 提交准备（待用户操作）
+  - [ ] 推送到公开 GitHub 仓库
+  - [ ] 部署静态站，拿到可运行的应用链接
+  - [ ] 录 ≤ 3 分钟演示视频，传公开 YouTube
+  - [ ] 2026-12-02 04:00（北京时间）前领 Kiro credits
+  - [ ] 2026-12-05 06:00（北京时间）前在 Devpost 提交
